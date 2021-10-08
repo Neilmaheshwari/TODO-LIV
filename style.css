@@ -1,0 +1,177 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgb(25, 28, 41);
+}
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  z-index: -1;
+}
+.background-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 100px 0px;
+  /* border: 2px solid black; */
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.title h1 {
+  font-size: 50px;
+  color: white;
+  font-weight: 500;
+}
+.new-todo {
+  background-color: RGB(43, 48, 70);
+  height: 70px;
+  margin-top: 50px;
+  border-radius: 7px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.check {
+  background-color: hsl(235, 24%, 19%);
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-mark {
+  width: 27px;
+  height: 27px;
+  border: 2px solid rgb(79, 87, 122);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-mark:hover,
+.check-mark.checked {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+
+.new-todo-input {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.new-todo-input form {
+  flex-grow: 1;
+}
+.new-todo-input input {
+  width: 100%;
+  padding: 10px 2px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: rgb(218, 218, 218);
+}
+.new-todo-input input::placeholder {
+  color: rgb(79, 87, 122);
+}
+.todo-items-wrapper {
+  margin-top: 40px;
+  background-color: RGB(43, 48, 70);
+  overflow: hidden;
+  box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.4);
+}
+.todo-item {
+  height: 70px;
+  border-radius: 7px;
+  display: flex;
+  background-color: hsl(235, 24%, 19%);
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid rgb(102, 102, 102);
+  transition: all 0.25s ease;
+  z-index: -1;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 7px 0px hsl(267, 26%, 8%);
+  border-color: hsl(235, 29%, 4%);
+  z-index: 10;
+}
+.todo-text {
+  color: rgb(218, 218, 218);
+  font-size: 17px;
+}
+.todo-text.checked {
+  text-decoration: line-through;
+  color: hsl(220, 2%, 33%);
+}
+.todo-items-info {
+  height: 80px;
+  width: 100%;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(233, 8%, 43%);
+  font-size: 18px;
+}
+a {
+  padding: 7px 8px;
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+  margin-right: 10px;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  padding: 7px 8px;
+  color: rgb(216, 219, 230);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in;
+}
+.btn:hover {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  border: 1px solid #333;
+  color: #fefefe;
+  border-radius: 5px;
+}
+.items-status {
+  display: flex;
+  flex-wrap: wrap;
+}
+.items-status span {
+  padding: 0px 8px;
+  font-size: 18px;
+}
+.items-status span:hover,
+.items-status span.active,
+.items-clear:hover {
+  color: hsl(220, 91%, 54%);
+}
+.items-clear {
+  text-align: end;
+}
